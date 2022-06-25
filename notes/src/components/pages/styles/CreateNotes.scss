@@ -1,0 +1,143 @@
+.popup-background{
+    background-color: rgba(#000000, 0.5);
+    width:100%;
+    position: fixed;
+    bottom:0;
+    left:0;
+    top:0;
+    bottom:0;
+    z-index:7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup-background{
+    .container{
+        background-color: #fff;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        width: 50%;
+        padding:max(30px, 3vw);
+        border-radius: max(15px, 0.95vw);
+        h1{
+            font-size: max(18px, 1.15vw);
+            margin:0 max(10px, 1vw);
+        }
+        .form{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .input{
+            border:1px solid #bbbbbb;
+            display: flex;
+            flex: 1;
+            border-radius: max(22.5px, 1.65vw);
+            padding: max(7px, 0.7vw) max(3px, 0.3vw);
+            background: transparent;
+            width:70%;
+            position:relative;
+            margin:max(10px, 1vw);
+            span{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin:0 max(2.5px, 0.3vw) 0 max(12.5px, 0.8vw);
+                font-size: max(22px, 1.55vw);
+                color:#a4a4a4;
+            }
+        }
+        .input{
+            &:hover, &:active, &:focus-within{
+                span{
+                    color:#427cff;
+                }
+            }
+        }
+        input, select{
+            border: none;
+            outline: none;
+            font-size: max(15px, 0.95vw);
+        }
+        select{
+            background: none;
+            flex: 1;
+            color:#918989;
+            border: 0;
+            &::placeholder{
+                color:#000;
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+        input[type="date"]::-webkit-inner-spin-button,
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            opacity: 0;
+            -webkit-opacity: 0;
+        }
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            transition: background-color 5000s ease-in-out 0s;
+            -webkit-transition: background-color 5000s ease-in-out 0s;
+            -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+            box-shadow: 0 0 0px 1000px transparent inset;
+            -webkit-text-fill-color: #000 !important;
+        }
+        .buttons{
+            display: flex;
+            margin-top: max(10px, 1vw);
+            float: right;
+            .button1, .button2{
+                margin:max(10px, 1vw) max(5px, 0.5vw) 0;
+                font-size: max(15px, 0.95vw);
+                padding: max(6px, .6vw) max(20px, 2vw);
+                border-radius: max(30px, 3vw);
+                cursor: pointer;
+            }
+            .button1{
+                color:#427cff;
+                &:hover{
+                    background-color: #427cff;
+                    color:#fff
+                }
+            }
+            .button2{
+                background-color: #427cff;
+                color:#fff;
+                &:hover{
+                    background-color: transparent;
+                    color:#427cff
+                }
+            }
+        }
+    }
+}
+@media(max-width:1232px){
+    .popup-background{
+        .container{
+            width: 60%;
+        }
+    }
+}
+@media(max-width:958px){
+    .popup-background{
+        .container{
+            width: 70%;
+        }
+    }
+}
+@media(max-width:556px){
+    .popup-background{
+        .container{
+            width: 80%;
+        }
+    }
+}
+@media(max-width:434px){
+    .popup-background{
+        .container{
+            width: 95%;
+        }
+    }
+}

@@ -1,0 +1,195 @@
+.notes{
+    position: relative;
+    padding: max(60px, 6vw) max(120px, 12vw)
+}
+.notes{
+    .create-note{
+        background-color: #427dfe;
+        width: fit-content;
+        font-size: max(18px, 1vw);
+        padding:max(10px, 1vw) max(15px, 1.5vw);
+        border-radius: max(30px, 3vw);
+        color:#fff
+    }
+    h1{
+        font-size: max(20px, 1.55vw);
+        margin:max(20px, 2vw) 0 max(10px, 1vw);
+    }
+    .search{
+        border:1px solid #cecece;
+        display: flex;
+        align-items: center;
+        flex: 1;
+        border-radius: max(22.5px, 1.65vw);
+        padding:max(2px, 0.2vw);
+        background: transparent;
+        margin:3% 0;
+        width:30%;
+        position:relative;
+        z-index: 2;
+    }
+    .search span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin:0 max(2.5px, 0.3vw) 0 max(12.5px, 0.8vw);
+        font-size: max(17px, 1.15vw);
+        color:#000;
+    }
+    input{
+        background: none;
+        flex: 1;
+        padding:0 max(3.5px, 0.3vw);
+        font-size: max(15px, 0.95vw);
+        color:#000;
+        border: 0;
+        &::placeholder{
+            color:#000;
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+    button{
+        height: max(37.5px, 2.7vw);
+        color:#fff;
+        border:0;
+        background: #427dfe;
+        padding:0 max(15px, 1.5vw);
+        border-radius: max(20px, 1.5vw);
+        cursor: pointer;
+        font-size: max(13px, 0.8vw);
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-transition: background-color 5000s ease-in-out 0s;
+        -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+        box-shadow: 0 0 0px 1000px transparent inset;
+        -webkit-text-fill-color: #000 !important;
+    }
+    .react-tabs{
+        display: flex;
+        justify-content: space-between;
+        .react-tabs__tab-list{
+            .react-tabs__tab{
+                outline: none;
+                padding:max(3px, 0.3vw) 0;
+                margin:max(5px, 0.5vw) 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+                span{
+                    font-size: max(22px, 1.45vw);
+                    margin-left: max(15px, 1.5vw);
+                    color:#5f6166;
+                }
+            }
+            h3{
+                font-size: max(18px, 1.45vw);
+                margin:max(6px, .6vw) 0;
+            }
+        }
+        .react-tabs__tab--selected{
+            color: #427dfe;
+        }
+        .panel{
+            width: 50%;
+            position: relative;
+            top:min(-80px, -8vw)
+        }
+        .react-tabs__tab-panel {
+            h3{
+                font-size: max(20px, 1.85vw);
+            }
+            .category-date{
+                display: flex;
+                align-items: center;
+                margin:max(10px, 1vw) 0;
+                p{
+                    font-size: max(15px, 0.95vw);
+                }
+                span{
+                    font-size: max(20px, 2vw);
+                    position: relative;
+                    top:max(2px, 0.2vw)
+                }
+            }
+            p{
+                font-size: max(18px, 1.15vw);
+            }
+        }
+    }
+}
+@media(max-width:1410px){
+    .notes{
+        .search{
+            width: 40%;
+        }
+    }
+}
+@media(max-width:1197px){
+    .notes{
+        .search{
+            width: 40%;
+        }
+    }
+}
+@media(max-width:1023px){
+    .notes{
+        .search{
+            width: 60%;
+        }
+        .react-tabs{
+            flex-direction: column;
+            .react-tabs__tab-list{
+                margin-bottom:10%;
+            }
+            .panel{
+                top: auto !important;
+                width: 100% !important;
+            }
+        }
+    }
+}
+@media(max-width:766px){
+    .notes{
+        padding: max(60px, 6vw) max(50px, 5vw);
+        .search{
+            width: 50%;
+        }
+    }
+}
+@media(max-width:658px){
+    .notes{
+        .search{
+            width: 60%;
+        }
+    }
+}
+@media(max-width:558px){
+    .notes{
+        .search{
+            width: 70%;
+        }
+    }
+}
+@media(max-width:500px){
+    .notes{
+        padding: max(60px, 6vw) 5%;
+        .search{
+            width: 90%;
+        }
+    }
+}
+@media(max-width:401px){
+    .notes{
+        padding: max(60px, 6vw) 3%;
+        .search{
+            width: 100%;
+        }
+    }
+}
