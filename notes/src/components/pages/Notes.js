@@ -43,13 +43,14 @@ const Notes = () => {
                             else if (props.title.toLowerCase().includes(search.toLowerCase())) {
                                 return props;
                             }
+                           
                         }).map((props)=>{
                             return(
                                <Tab key={props.content}>
                                     <h3>{props.title}</h3>
                                 </Tab>
                             )
-                        }) : null}
+                        }) : <h3>No data was found</h3>}
                     </TabList>
                     <div className='panel'>
                         {notesData ? notesData.map((props)=>{

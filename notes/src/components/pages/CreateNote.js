@@ -4,7 +4,6 @@ import {MdTitle, MdCategory, MdDateRange} from 'react-icons/md'
 import {AiOutlineFileText} from 'react-icons/ai'
 import { FormattedMessage } from "react-intl";
 export default function CreateNote({ showPopup, setShowPopup }) {
-
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
     const [category, setCategory] = useState('');
@@ -38,15 +37,18 @@ export default function CreateNote({ showPopup, setShowPopup }) {
         category:category,
         date:date
       }
-      console.log(title+"hhhhhhhhh")
       const sendData = () =>{
         if(title.trim().length === 0 || content.trim().length === 0 || category.trim().length === 0 || date.trim().length === 0){
-          <p>Please fill the fields!</p>
+          
         }
         else{
           const parsedArray2 = array ? JSON.parse(array) : [];
           const newArray1 = [...parsedArray2, notes];
           localStorage.setItem('notesData', JSON.stringify(newArray1));
+          setTitle(" ")
+          setContent(" ")
+          setCategory(" ")
+          setDate(" ")
           setShowPopup(false);
         }
     }
